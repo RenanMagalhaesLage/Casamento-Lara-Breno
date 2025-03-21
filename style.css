@@ -612,10 +612,7 @@ footer{
     html{
         font-size: 55%;
     }
-    .home svg {
-        bottom: -5px; /* Distância do final da seção */
-        width: 250%;
-    }
+
 }
 
 @media (max-width: 991px){
@@ -644,7 +641,7 @@ footer{
         margin-right: 10%; /* Adiciona um pequeno espaçamento entre as colunas */
     }
     .home svg {
-        bottom: -3px; /* Distância do final da seção */
+        bottom: -2px; /* Distância do final da seção */
         width: 250%;
     }
 
@@ -719,17 +716,6 @@ footer{
     .home-conteudo h1{
         font-size: 5rem;
     }
-
-    /* Dividir os blocos em duas colunas em telas pequenas */
-    .bloco-tempo {
-        width: 50%; /* Cada bloco ocupa metade da largura disponível */
-        max-width: 300px; /* Limite a largura máxima para que não fiquem grandes demais */
-    }
-
-    /* Para fazer as duas colunas ficarem alinhadas de maneira mais consistente */
-    .tempo > .bloco-tempo:nth-child(odd) {
-        margin-right: 4%; /* Adiciona um pequeno espaçamento entre as colunas */
-    }
     
 }
 
@@ -753,9 +739,20 @@ footer{
     .apresentacao-img img, .sobre-img img{
         width: 70vw;
     }
+
+    .contador{
+        margin-left: 50px;
+    }
+
+
 }
 
 @media (max-width: 480px) {
+
+    .contador{
+        margin-left: 25px;
+    }
+
     .bloco-tempo {
         padding: 15px 20px; /* Reduz o padding para telas menores */
     }
@@ -766,6 +763,18 @@ footer{
 
     .bloco-tempo div {
         font-size: 1rem; /* Ajusta o tamanho da fonte do texto inferior */
+    }
+
+
+    /* Dividir os blocos em duas colunas em telas pequenas */
+    .bloco-tempo {
+        width: 50%; /* Cada bloco ocupa metade da largura disponível */
+        max-width: 200px; /* Limite a largura máxima para que não fiquem grandes demais */
+    }
+        
+    /* Para fazer as duas colunas ficarem alinhadas de maneira mais consistente */
+    .tempo > .bloco-tempo:nth-child(odd) {
+        margin-right: 10%; /* Adiciona um pequeno espaçamento entre as colunas */
     }
 
     .wrapper .row .programacao-item {
