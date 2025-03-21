@@ -131,11 +131,13 @@ img{
 /* Ajuste do SVG */
 .home svg {
     position: absolute;
-    bottom: -10px; /* Distância do final da seção */
+    bottom: -10px;
     left: 0;
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: auto; 
     z-index: 2;
+    max-width: 100%; 
+    display: block; 
 }
 
 /* Camada de sobreposição */
@@ -642,7 +644,7 @@ footer{
         margin-right: 10%; /* Adiciona um pequeno espaçamento entre as colunas */
     }
     .home svg {
-        bottom: -5px; /* Distância do final da seção */
+        bottom: -3px; /* Distância do final da seção */
         width: 250%;
     }
 
