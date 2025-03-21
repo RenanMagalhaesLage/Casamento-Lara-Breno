@@ -38,7 +38,7 @@ window.onscroll = () =>{
 };
 
 /*Códio da Contagem regressiva*/
-const dataEvento = new Date("June 07, 2025 00:00:00").getTime();
+const dataEvento = new Date("June 07, 2025 15:00:00").getTime();
 
     // Atualize a contagem regressiva a cada 1 segundo
     const intervalo = setInterval(function() {
