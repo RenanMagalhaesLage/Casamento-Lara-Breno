@@ -719,7 +719,7 @@ footer{
     /* Dividir os blocos em duas colunas em telas pequenas */
     .bloco-tempo {
         width: 50%; /* Cada bloco ocupa metade da largura disponível */
-        max-width: 300px; /* Limite a largura máxima para que não fiquem grandes demais */
+        max-width: 200px; /* Limite a largura máxima para que não fiquem grandes demais */
     }
 
     /* Para fazer as duas colunas ficarem alinhadas de maneira mais consistente */
