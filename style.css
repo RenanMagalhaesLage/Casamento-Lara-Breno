@@ -739,20 +739,9 @@ footer{
     .apresentacao-img img, .sobre-img img{
         width: 70vw;
     }
-
-    .contador{
-        margin-left: 50px;
-    }
-
-
 }
 
 @media (max-width: 480px) {
-
-    .contador{
-        margin-left: 25px;
-    }
-
     .bloco-tempo {
         padding: 15px 20px; /* Reduz o padding para telas menores */
     }
