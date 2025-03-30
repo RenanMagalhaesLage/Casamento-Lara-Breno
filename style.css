@@ -64,53 +64,61 @@ img{
     z-index: 100;
     transition: background-color 0.3s ease; /* Animação suave para a mudança de fundo */
     text-transform: uppercase;
-  }
+}
 
-  .header.sticky {
+.header.sticky {
     background-color: var(--color-body); /* Cor de fundo quando a página é rolada */
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-  }
+}
 
-  .header.sticky a {
+.header.sticky a {
     color: var(--my-black);
-  }
+}
 
 
-  .logo {
+.logo {
     font-size: 2rem;
     color: var(--my-white);
     font-weight: 400;
     cursor: default;
     font-family: 'FonteTitulo', sans-serif;
-  }
+}
 
-  .navbar a {
-    font-size: 1.7rem;
-    color: var(--my-white);
-    margin-left: 4rem;
-    transition: .2s;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-  }
+#menu-icon{
+    display: block;
+    cursor: pointer;
+    color: var(--my-black);
+    font-size: 3.6rem;
+}
 
-  .navbar a:hover, .navbar a.active {
-    border-bottom: 1px solid var(--my-white);
-    color: var(--my-white);
-    font-weight: 400;
-  }
+.navbar{
+    position: absolute;
+    top:100%;
+    left:0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--color-body);
+    border-top: .1rem solid rgba(0,0,0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    display: none;
+}
 
-  .header.sticky .navbar a:hover, 
-  .header.sticky .navbar a.active {
+.navbar.active{
+    display: block;
+}
+
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--my-black);
+}
+
+.navbar a:hover, .navbar a.active {
     border-bottom: 1px solid var(--my-black);
     color: var(--my-black);
     font-weight: 400;
-  }
-
-  #menu-icon {
-    font-size: 3.6rem;
-    color: var(--my-black);
-    display: none;
-  }
+}
 
 /* ----------HOME---------- */
 .home {
@@ -346,7 +354,7 @@ img{
 }
 
 .trajes-conteudo p{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 300;
     margin: 1rem 0 2rem ;
     color: var(--text-color);
@@ -594,11 +602,11 @@ img{
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 30px;
     white-space: nowrap;
     transition: transform 0.3s ease, background-color 0.3s ease; 
     max-width: 80px; 
+    margin-bottom: 15px;
     
 }
 
@@ -660,37 +668,7 @@ footer{
         font-size: 55%;
     }
 
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top:100%;
-        left:0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--color-body);
-        border-top: .1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        display: none;
-    }
-
-    .navbar.active{
-        display: block;
-    }
-
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: var(--my-black);
-    }
-
-    .navbar a:hover, .navbar a.active {
-        border-bottom: 1px solid var(--my-black);
-        color: var(--my-black);
-        font-weight: 400;
-    }
+   
 }
 
 @media (max-width: 991px){
@@ -761,7 +739,9 @@ footer{
         margin: 0 2rem; /* Reduz o margin para dispositivos móveis */
     }
 
-
+    .trajes-conteudo{
+        margin: 0 2rem;
+    }
 
     .home{
         flex-direction: column;
