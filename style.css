@@ -272,7 +272,7 @@ img{
 }
 
 .heading {
-    animation: fadeIn 1.5s ease-in-out; /* Animação suave para o título */
+    animation: fadeIn 1.5s ease-in-out; 
 }
 
 /* ----------SÉRIES---------- */
@@ -310,7 +310,7 @@ img{
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -350,7 +350,6 @@ img{
     font-weight: 300;
     margin: 1rem 0 2rem ;
     color: var(--text-color);
-    
     justify-content: center;
     align-items: center;
     text-align: justify;
@@ -359,8 +358,42 @@ img{
 
 .destaque {
     font-weight: bold;
-    color: var(--highlight-color); /* Você pode personalizar essa cor */
+    color: var(--my-black); 
 }
+
+.traje {
+    background-color: var(--my-black);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quadro {
+    margin-bottom: 2rem;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--my-white) !important;
+}
+
+.titulo i {
+    font-size: 2.5rem;
+    color: var(--highlight-color);
+}
+
+.descricao {
+    font-size: 1.6rem;
+    color: var(--my-white) !important;
+    line-height: 1.6;
+}
+
 
 
 /* ----------PROGRAMAÇÃO DO EVENTO---------- */
@@ -488,6 +521,10 @@ img{
     left: -60px;
 }
 
+.row-2 .hours{
+    padding-left: 10px;
+}
+
 .row .programacao-item .details,
 .row .programacao-item .bottom{
     display: flex;
@@ -523,6 +560,15 @@ img{
     margin: 0 15rem;
 }
 
+.presentes-conteudo div {
+    display: flex;                   
+    justify-content: center;         
+    align-items: center;      
+    gap: 1rem;                    
+    flex-wrap: wrap;             
+    margin-top: 20px;               
+}
+
 .presentes-conteudo h2{
     text-align: center;
     line-height: 3;
@@ -548,11 +594,12 @@ img{
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 25px;
     margin-top: 20px;
     white-space: nowrap;
     transition: transform 0.3s ease, background-color 0.3s ease; 
-
+    max-width: 80px; 
+    
 }
 
 .btn-presentes span {
@@ -562,7 +609,6 @@ img{
 .btn-presentes:hover {
     background-color: #1f2629;
     transform: scale(1.1); 
-
 }
 
 
@@ -608,11 +654,43 @@ footer{
 
 
 /*---------------------------------------BREAKPOINTS----------------------------------------*/
-@media (max-width: 1200px){
+
+@media (max-width: 1600px){
     html{
         font-size: 55%;
     }
 
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--color-body);
+        border-top: .1rem solid rgba(0,0,0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--my-black);
+    }
+
+    .navbar a:hover, .navbar a.active {
+        border-bottom: 1px solid var(--my-black);
+        color: var(--my-black);
+        font-weight: 400;
+    }
 }
 
 @media (max-width: 991px){
@@ -626,9 +704,9 @@ footer{
         padding: 2rem 3%;
     }
     .tempo {
-        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+        flex-wrap: wrap; 
         gap: 20px;
-        justify-content: space-between; /* Espaçamento entre os grupos */
+        justify-content: space-between; 
     }
 
     /* Dividir os blocos em duas colunas em telas pequenas */
@@ -674,37 +752,16 @@ footer{
 }
 
 @media (max-width: 768px){
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top:100%;
-        left:0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--color-body);
-        border-top: .1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        display: none;
+
+    .iframe-container {
+        padding-bottom: 75%; /* Ajuste para 4:3 se necessário */
     }
 
-    .navbar.active{
-        display: block;
+    .series-conteudo {
+        margin: 0 2rem; /* Reduz o margin para dispositivos móveis */
     }
 
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: var(--my-black);
-    }
 
-    .navbar a:hover, .navbar a.active {
-        border-bottom: 1px solid var(--my-black);
-        color: var(--my-black);
-        font-weight: 400;
-      }
 
     .home{
         flex-direction: column;
@@ -724,7 +781,17 @@ footer{
 
     /* Para fazer as duas colunas ficarem alinhadas de maneira mais consistente */
     .tempo > .bloco-tempo:nth-child(odd) {
-        margin-right: 4%; /* Adiciona um pequeno espaçamento entre as colunas */
+        margin-right: 0%; /* Adiciona um pequeno espaçamento entre as colunas */
+    }
+    .contador div{
+        display: flex;
+        justify-content: center;         
+        align-items: center;  
+        flex-wrap: wrap;           
+    }
+
+    .bloco-tempo div{
+        margin-left: 10px;
     }
     
 }
